@@ -25,7 +25,7 @@ from Yumeko import *
 
 from Yumeko.events import register 
 
-@register(pattern=r"^/reverse(?: |$)(\d*)")
+@register(pattern=r"^/pt(?: |$)(\d*)")
 async def okgoogle(img):
     """ For .reverse command, Google search images and stickers. """
     if os.path.isfile("okgoogle.png"):
