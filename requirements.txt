@@ -7,7 +7,7 @@ gtts
 faker
 beautifulsoup4
 requests
-python-telegram-bot==12.8
+python-telegram-bot==13.8
 sqlalchemy==1.4.11
 ffmpeg-python
 psycopg2-binary
