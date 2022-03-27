@@ -896,12 +896,15 @@ def migrate_chats(update: Update, context: CallbackContext):
     LOGGER.info("Successfully migrated!")
     raise DispatcherHandlerStop
 
-
 def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I Aᴍ Aʟɪᴠᴇ](https://telegra.ph/file/5b6c36ca2a797b7ad31d5.jpg)" 
+            dispatcher.bot.sendMessage(
+                f"@{SUPPORT_CHAT}",
+                "[Yes I'm alive now!](https://telegra.ph/file/fefbe49175499b0646495.mp4)",
+                parse_mode=ParseMode.MARKDOWN,
+            )
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -909,6 +912,8 @@ def main():
         except BadRequest as e:
             LOGGER.warning(e.message)
 
+
+ 
     test_handler = CommandHandler("test", test)
     start_handler = CommandHandler("start", start)
 
